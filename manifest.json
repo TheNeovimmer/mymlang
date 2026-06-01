@@ -1,0 +1,27 @@
+{
+  "name": "MyM - Sign Language Learning",
+  "short_name": "MyM",
+  "description": "Learn sign language with dictionary, lessons, practice and live translation",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#09131f",
+  "theme_color": "#09131f",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": ["any", "maskable"]
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": ["any", "maskable"]
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "prefer_related_applications": false
+}
