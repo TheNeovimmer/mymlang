@@ -299,8 +299,8 @@ function bindEvents() {
     showToast('Video loaded. Demo interpretation prepared.');
   });
   const sound = document.getElementById('soundPractice');
-  if (sound) sound.addEventListener('click', () => { state.route = 'translate'; state.mode = 'voice'; render(); });
-  document.querySelectorAll('[data-practice-sign]').forEach(el => el.addEventListener('click', () => { state.route = 'practice'; render(); showToast(`Practice started: ${el.dataset.practiceSign}`); }));
+  if (sound) sound.addEventListener('click', () => { state.mode = 'voice'; setRoute('translate'); });
+  document.querySelectorAll('[data-practice-sign]').forEach(el => el.addEventListener('click', () => { setRoute('practice'); showToast(`Practice started: ${el.dataset.practiceSign}`); }));
 }
 function translatePhrase(text) {
   const input = document.getElementById('translateInput');
