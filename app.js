@@ -1,39 +1,49 @@
 const ICONS = {
-  home: '<svg class="icon" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>',
-  book: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H21"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H21v20H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M8 6h8"/></svg>',
-  camera: '<svg class="icon" viewBox="0 0 24 24"><path d="M14.5 4 16 7h3a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l1.5-3h5z"/><circle cx="12" cy="13" r="3.5"/></svg>',
-  user: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
-  hand: '<svg class="icon" viewBox="0 0 24 24"><path d="M7 11V5a2 2 0 0 1 4 0v5"/><path d="M11 10V4a2 2 0 0 1 4 0v7"/><path d="M15 11V6a2 2 0 0 1 4 0v7"/><path d="M7 11 5.8 9.8a2 2 0 0 0-2.8 2.8l5.2 6.2A6 6 0 0 0 12.8 21H15a4 4 0 0 0 4-4v-4"/></svg>',
-  mic: '<svg class="icon" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>',
-  text: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M12 5v14"/><path d="M8 19h8"/></svg>',
-  search: '<svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>',
-  star: '<svg class="icon" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z"/></svg>',
-  play: '<svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',
-  chevron: '<svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>',
-  gear: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 0 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1A2 2 0 0 1 4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.3 7A2 2 0 0 1 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 .9-1.6V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1A2 2 0 0 1 19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.6.9h.1a2 2 0 0 1 0 4H21a1.7 1.7 0 0 0-1.6 1z"/></svg>',
-  bell: '<svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg>',
-  trophy: '<svg class="icon" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4v2a4 4 0 0 0 4 4"/><path d="M16 6h4v2a4 4 0 0 1-4 4"/><path d="M12 13v5"/><path d="M8 21h8"/></svg>',
-  clock: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
-  volume: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6l-5 4H4z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M18.5 6.5a9 9 0 0 1 0 11"/></svg>',
-  spark: '<svg class="icon" viewBox="0 0 24 24"><path d="M13 2 9 12l-7 2 7 2 4 6 2-8 7-2-7-2-2-8z"/></svg>',
-  mail: '<svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
-  back: '<svg class="icon" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>',
-  list: '<svg class="icon" viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>'
+  home: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>',
+  book: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H21"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H21v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg>',
+  camera: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4 16 7h3a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-14a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l1.5-3h5z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  user: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
+  hand: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V4a2 2 0 0 1 4 0v4"/><path d="M14 11V5a2 2 0 0 1 4 0v9.5a4.5 4.5 0 0 1-4.5 4.5h-3a4.5 4.5 0 0 1-4.5-4.5V11a2 2 0 0 1 4 0"/><path d="M10 11V6a2 2 0 0 1 4 0"/><path d="M6 11V7a2 2 0 0 1 4 0"/><path d="M6 11a2 2 0 0 0-2 2v2.5a4.5 4.5 0 0 0 4.5 4.5H10"/></svg>',
+  mic: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>',
+  text: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M8 5v14"/><path d="M12 5v12"/><path d="M16 5v8"/></svg>',
+  search: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>',
+  star: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z"/></svg>',
+  starOutline: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z"/></svg>',
+  play: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>',
+  chevron: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>',
+  gear: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>',
+  bell: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg>',
+  trophy: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4v2a4 4 0 0 0 4 4"/><path d="M16 6h4v2a4 4 0 0 1-4 4"/><path d="M12 13v5"/><path d="M8 21h8"/><path d="M4 9h16"/></svg>',
+  clock: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  volume: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>',
+  spark: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/></svg>',
+  mail: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  back: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
+  list: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>',
+  close: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>',
+  waveform: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h2"/><path d="M6 8v8"/><path d="M10 4v16"/><path d="M14 8v8"/><path d="M18 6v12"/><path d="M22 10v4"/></svg>',
+  handSignA: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M5 15a2 2 0 1 1 4 0v-7H7v7zm6-1a2 2 0 1 1 3-1.5v-6h-1.5v7.5zm4-1a2 2 0 1 1 4 0v-6h-1.5v6zm6-2v9a2 2 0 0 1-2 2h-2v-3h-2v3H8v-3H6v3H4a2 2 0 0 1-2-2V9h16z"/></svg>',
+  handSignB: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M6 11h1a2 2 0 0 1 0 4h-1v-4zm3 0h1a2 2 0 0 1 0 4h-1v-4zm3 0h1a2 2 0 0 1 0 4h-1v-4zm6 0h1a2 2 0 0 1 0 4h-1v-4zM5 11a2 2 0 0 1 2 2 1.5 1.5 0 0 1-1.5 1.5H4a2 2 0 0 1-2-2v-3.5A1.5 1.5 0 0 1 3.5 9H4a2 2 0 0 1 2-2v-1a2 2 0 0 1 4 0v1a2 2 0 0 1 2-2h.5A1.5 1.5 0 0 1 19 7v3.5a2 2 0 0 1-2 2h-.5A1.5 1.5 0 0 1 15 10V8a2 2 0 0 1 4 0v3a2 2 0 0 1-2 2h-1.5A1.5 1.5 0 0 1 15 11"/></svg>',
+  handSignC: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7 10a2 2 0 0 1 2 2v6H9a2 2 0 0 1-3-3v-3.5A2.5 2.5 0 0 1 8.5 10H7zm4-1a2 2 0 0 1 4 0v8h-1.5V9H11zm6 0a2 2 0 0 1 4 0v8h-1.5V9h-1.5zM6 10.5V18a2 2 0 0 0 2 2h2v-3H8v-1.5a2.5 2.5 0 0 1 2.5-2.5H8V10h-1.5v.5H6z"/></svg>',
+  handSignD: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7 10a2 2 0 0 1 4 0v7H9v-7zm6-2a2 2 0 0 1 4 0v9h-1.5v-9zm-6 4a2 2 0 0 1 4 0v7h-1.5v-7zM5 10a2 2 0 0 1 2 2 1.5 1.5 0 0 1-1.5 1.5H4a2 2 0 0 1-2-2v-3.5A1.5 1.5 0 0 1 3.5 9H4a2 2 0 0 1 2-2v-1a2 2 0 0 1 4 0v1a2 2 0 0 1 2-2h.5A1.5 1.5 0 0 1 19 7v3.5a2 2 0 0 1-2 2h-.5A1.5 1.5 0 0 1 15 11v-1a2 2 0 0 1 4 0v1a2 2 0 0 1-2 2h-1.5A1.5 1.5 0 0 1 13 13"/></svg>',
+  handSignF: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="11" cy="12" r="2"/><path d="M13 12v1a2 2 0 1 1-4 0v-3.5A1.5 1.5 0 0 1 10.5 8H11a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-.5A1.5 1.5 0 0 1 9 14v1a2 2 0 0 1-4 0v-4a2 2 0 0 1 4 0z"/></svg>',
+  handSignH: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M5 10v5h1.5v-3A1.5 1.5 0 0 1 8 10.5V15H9.5V12a1.5 1.5 0 0 1 3 0v3H14V11.5a1.5 1.5 0 0 1 3 0V15h1.5v-3a1.5 1.5 0 0 1 3 0V7h.5a1.5 1.5 0 0 1 1.5 1.5V15a1.5 1.5 0 0 1-3 0v-3h-1.5v2.5a1.5 1.5 0 0 1-3 0V10a1.5 1.5 0 0 1-3 0v5H6V11.5a1.5 1.5 0 0 1-3 0V7H4v5a1.5 1.5 0 0 0 1.5 1.5z"/></svg>',
+  handSignT: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7 9a2 2 0 0 1 4 0v7h1V9a2 2 0 0 1 4 0v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-7h-1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>'
 };
 
 const signs = [
-  ['A', 'Apple', 'Closed fist rotates gently on the cheek.', true],
-  ['A', 'Afternoon', 'Dominant hand rests above the other hand in a downward angle.', false],
-  ['A', 'Always', 'Index finger circles near the head.', false],
-  ['B', 'Baby', 'Arms rock as if holding a baby.', true],
-  ['B', 'Beautiful', 'Open hand circles in front of the face and closes.', false],
-  ['B', 'Blue', 'B-hand twists near shoulder height.', false],
-  ['C', 'Cat', 'Pinch fingers near cheeks like whiskers.', true],
-  ['C', 'Coffee', 'Stack fists and rotate like a grinder.', false],
-  ['D', 'Doctor', 'Tap fingers on the wrist like checking pulse.', false],
-  ['F', 'Friend', 'Hook index fingers together, then switch.', true],
-  ['H', 'Hello', 'Open hand moves outward from forehead.', true],
-  ['T', 'Thank you', 'Flat hand moves from chin outward.', true]
+  ['A', 'Apple', 'Closed fist rotates gently on the cheek.', true, 'icons/sign-a.png', 'Hold up an “A” handshape near your cheek and rotate gently.', 'Easy'],
+  ['A', 'Afternoon', 'Dominant hand rests above the other hand in a downward angle.', false, 'icons/sign-a.png', 'Start with “A” hand above non-dominant hand, move down.', 'Medium'],
+  ['A', 'Always', 'Index finger circles near the head.', false, 'icons/sign-a.png', 'Index finger circles around the temple area repeatedly.', 'Easy'],
+  ['B', 'Baby', 'Arms rock as if holding a baby.', true, 'icons/sign-b.png', 'Use “B” hands and rock them side to side like holding a baby.', 'Easy'],
+  ['B', 'Beautiful', 'Open hand circles in front of the face and closes.', false, 'icons/sign-b.png', '“B” hand opens in front of face then closes smoothly.', 'Medium'],
+  ['B', 'Blue', 'B-hand twists near shoulder height.', false, 'icons/sign-b.png', '“B” hand rotates at shoulder height with a shaking motion.', 'Easy'],
+  ['C', 'Cat', 'Pinch fingers near cheeks like whiskers.', true, 'icons/sign-c.png', '“C” hand near both cheeks, pull away like whiskers stretching.', 'Easy'],
+  ['C', 'Coffee', 'Stack fists and rotate like a grinder.', false, 'icons/sign-c.png', 'Stack “C” hands and rotate as if grinding coffee.', 'Easy'],
+  ['D', 'Doctor', 'Tap fingers on the wrist like checking pulse.', false, 'icons/sign-d.png', 'Tap “D” fingertips to wrist with a quick motion.', 'Easy'],
+  ['F', 'Friend', 'Hook index fingers together, then switch.', true, 'icons/sign-f.png', 'Link “F” index fingers, then hook and unhook alternately.', 'Medium'],
+  ['H', 'Hello', 'Open hand moves outward from forehead.', true, 'icons/sign-h.png', '"H" hand starts at forehead, waves forward like saluting.', 'Easy'],
+  ['T', 'Thank you', 'Flat hand moves from chin outward.', true, 'icons/sign-t.png', '"T" hand starts at chin and moves forward with a gentle bow.', 'Easy']
 ];
 
 const lessons = [
@@ -190,18 +200,23 @@ function dictionary() {
       ].map(([key, label, ic]) => `<button class="filter-tab ${state.signFilter === key ? 'active' : ''}" data-filter="${key}" aria-pressed="${state.signFilter === key}">${icon(ic)}<span>${label}</span></button>`).join('')}
     </div>
     <div class="sign-list">${filtered.map((s, i) => signRow(s, i)).join('') || `<div class="empty-state">${icon('search')}No signs match that search.</div>`}</div>
-    ${filtered.length && state.selectedSign ? signDetail(state.selectedSign) : ''}
+    ${filtered.length && state.selectedSign ? `<div class="sign-encapsulate">${signDetail(state.selectedSign)}</div>` : ''}
   </section>`, 'Dictionary', 'visual sign guide');
 }
 function signRow(s, i) {
+  const signIcon = s[4] ? `<img class="sign-icon-img" src="${s[4]}" alt="${s[1]} sign" loading="lazy" />` : s[0];
   return `<button class="sign-item ${state.selectedSign === s ? 'selected' : ''}" data-sign-index="${signs.indexOf(s)}" aria-label="Open ${s[1]} sign">
-    <span class="sign-letter">${s[0]}</span>
-    <span><strong>${s[1]}</strong><span>${s[2]}</span></span>
-    <span class="sign-action ${s[3] ? 'saved' : ''}" aria-hidden="true">${s[3] ? icon('star') : icon('chevron')}</span>
+    <span class="sign-letter">${signIcon}</span>
+    <span><strong>${s[1]}</strong><span>${escapeHtml(s[2])}</span></span>
+    <button class="sign-action ${s[3] ? 'saved' : ''}" data-action-toggle-favorite="${escapeAttr(s[1])}" aria-label="Toggle favorite" onclick="event.stopPropagation();">${s[3] ? icon('star') : icon('chevron')}</button>
   </button>`;
 }
 function signDetail(s) {
-  return `<article class="sign-detail-card"><div class="sign-video-box">${icon('hand')}</div><h2 class="section-heading">${s[1]}</h2><p class="page-subtitle">${s[2]} Practice slowly first, then repeat at conversation speed.</p><div class="detail-actions"><button class="primary-btn" data-practice-sign="${s[1]}">${icon('hand')} Practice</button><button class="secondary-btn compact-btn" data-toggle-favorite="${s[1]}">${icon('star')} ${s[3] ? 'Saved' : 'Save'}</button></div></article>`;
+  const signIcon = s[4] ? `<img class="sign-icon-img" src="${s[4]}" alt="${s[1]} sign" />` : icon('hand');
+  const meta = s[5] ? `<div class="sign-detail-meta"><span class="sign-meta-chip">${icon('starOutline')} ${escapeHtml(s[6] || 'Standard')}</span></div>` : '';
+  const desc = s[5] || 'Practice this sign to build comfort with handshape and movement.';
+  const primaryLabel = s[1];
+  return `<article class="sign-detail-card"><div class="sign-video-box">${signIcon}</div><div class="sign-detail-meta"><h2 class="section-heading">${escapeHtml(primaryLabel)}</h2>${meta}</div><p class="page-subtitle">${escapeHtml(desc)} Practice slowly first, then repeat at conversation speed.</p><div class="detail-actions"><button class="primary-btn" data-practice-sign="${escapeAttr(s[1])}">${icon('hand')} Practice</button><button class="detail-fav-btn ${s[3] ? 'is-saved' : ''}" data-action-toggle-favorite="${escapeAttr(s[1])}" aria-label="Toggle favorite">${s[3] ? icon('star') : icon('starOutline')}</button></div></article>`;
 }
 function lessonList(list = lessons) {
   return `<div class="lesson-list">${list.map((l, index) => `<button class="lesson-card" data-lesson-index="${lessons.indexOf(l) >= 0 ? lessons.indexOf(l) : index}"><div class="lesson-progress">${l[2]}%</div><div><h3>${l[0]}</h3><p>${l[1]}</p><div class="progress-line" style="--value:${l[2]}%"><i></i></div></div></button>`).join('')}</div>`;
@@ -268,7 +283,7 @@ function bindEvents() {
   document.querySelectorAll('[data-phrase]').forEach(el => el.addEventListener('click', () => translatePhrase(el.dataset.phrase)));
   document.querySelectorAll('[data-history-phrase]').forEach(el => el.addEventListener('click', () => { state.mode = 'text'; setRoute('translate'); setTimeout(() => translatePhrase(el.dataset.historyPhrase), 0); }));
   document.querySelectorAll('[data-sign-index]').forEach(el => el.addEventListener('click', () => { state.selectedSign = signs[Number(el.dataset.signIndex)]; render(); }));
-  document.querySelectorAll('[data-toggle-favorite]').forEach(el => el.addEventListener('click', () => toggleFavorite(el.dataset.toggleFavorite)));
+  document.querySelectorAll('[data-action-toggle-favorite], [data-toggle-favorite]').forEach(el => el.addEventListener('click', (e) => { e.stopPropagation(); toggleFavorite(el.dataset.actionToggleFavorite || el.dataset.toggleFavorite); }));
   const search = document.getElementById('signSearch');
   if (search) search.addEventListener('input', e => {
     state.signQuery = e.target.value;
