@@ -208,7 +208,10 @@ function signRow(s, i) {
   return `<button class="sign-item ${state.selectedSign === s ? 'selected' : ''}" data-sign-index="${signs.indexOf(s)}" aria-label="Open ${s[1]} sign">
     <span class="sign-letter">${signIcon}</span>
     <span><strong>${s[1]}</strong><span>${escapeHtml(s[2])}</span></span>
-    <button class="sign-action ${s[3] ? 'saved' : ''}" data-action-toggle-favorite="${escapeAttr(s[1])}" aria-label="Toggle favorite" onclick="event.stopPropagation();">${s[3] ? icon('star') : icon('chevron')}</button>
+    <span class="sign-actions">
+      <span class="sign-action ${s[3] ? 'saved' : ''}" data-action-toggle-favorite="${escapeAttr(s[1])}" aria-label="Toggle favorite">${s[3] ? icon('star') : icon('starOutline')}</span>
+      <span class="sign-chevron" aria-hidden="true">${icon('chevron')}</span>
+    </span>
   </button>`;
 }
 function signDetail(s) {
@@ -269,9 +272,15 @@ function routeView() {
   return notFound();
 }
 function render() {
+  const scrollY = window.scrollY;
   app.innerHTML = routeView();
   bindEvents();
   if (state.route === 'translate' && state.mode === 'camera') startCamera();
+  if (state.selectedSign && (state.signFilter !== 'favorites' || state.selectedSign[3])) {
+    const selectedEl = app.querySelector('.sign-item.selected .sign-letter') || app.querySelector('.sign-detail-card');
+    if (selectedEl) selectedEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  window.scrollTo(0, scrollY);
 }
 function bindEvents() {
   document.querySelectorAll('[data-route]').forEach(el => el.addEventListener('click', () => setRoute(el.dataset.route)));
@@ -338,8 +347,18 @@ function toggleFavorite(name) {
   if (!sign) return;
   sign[3] = !sign[3];
   state.selectedSign = sign;
-  render();
+  updateFavoriteUI();
   showToast(`${name} ${sign[3] ? 'saved to favorites' : 'removed from favorites'}`);
+}
+function updateFavoriteUI() {
+  document.querySelectorAll('[data-action-toggle-favorite]').forEach(el => {
+    const sign = signs.find(s => s[1] === el.dataset.actionToggleFavorite);
+    if (!sign) return;
+    el.classList.toggle('saved', sign[3]);
+    el.innerHTML = sign[3] ? icon('star') : icon('starOutline');
+    const btn = el.closest('.detail-fav-btn');
+    if (btn) btn.classList.toggle('is-saved', sign[3]);
+  });
 }
 function speakOutput() {
   const text = document.getElementById('translationOutput')?.textContent || 'No translation yet.';
